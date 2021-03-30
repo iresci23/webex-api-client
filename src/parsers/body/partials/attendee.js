@@ -21,7 +21,7 @@ module.exports = attendee => {
 		validType(PERSONTYPES, person.type);
 	}
 
-	const misc = pick(attendee, ['contactID', 'joinStatus', 'role', 'emailInvitations','sendEmail']);
+	const misc = pick(attendee, ['contactID', 'joinStatus', 'role', 'emailInvitations']);
 
 	if (misc.role) {
 		validType(ROLES, misc.role);

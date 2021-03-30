@@ -85,7 +85,7 @@ Client.Builder = class {
 		return this;
 	}
 	meetingKey(meetingKey) {
-		this.data.meetingKey = meetingKey;
+		this.data.meetingkey = meetingKey;
 		return this;
 	}
 	participants(participants) {
