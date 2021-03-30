@@ -15,13 +15,13 @@ module.exports = attendee => {
 	// Pull out all the possible properties
 	const person = pick(attendee, [
 		'email', 'name', 'firstName', 'lastName', 'title', 'company',
-		'webExId', 'address', 'phones', 'notes', 'url', 'type', 'sendReminder']);
+		'webExId', 'address', 'phones', 'notes', 'url', 'type']);
 
 	if (person.type) {
 		validType(PERSONTYPES, person.type);
 	}
 
-	const misc = pick(attendee, ['contactID', 'joinStatus', 'role']);
+	const misc = pick(attendee, ['contactID', 'joinStatus', 'role', 'emailInvitations','sendEmail']);
 
 	if (misc.role) {
 		validType(ROLES, misc.role);
