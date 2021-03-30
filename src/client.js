@@ -84,8 +84,13 @@ Client.Builder = class {
 		this.data.metaData = metaData;
 		return this;
 	}
+	// call setService() before meetingKey()
 	meetingKey(meetingKey) {
-		this.data.meetingkey = meetingKey;
+		if ( this.serviceName == "GetMeeting") {
+			this.data.meetingKey = meetingKey;
+		} else {
+			this.data.meetingkey = meetingKey;
+		}
 		return this;
 	}
 	participants(participants) {
